@@ -1,61 +1,77 @@
-CodeBook
 
-This is a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data.
-The data source
 
-    Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-    Original description of the dataset: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+CODE BOOK for FINAL PROJECT
 
-Data Set Information
+IDENTIFIERS
 
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+"subject", Factor, The ID of the test subject.
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
-The data
+"activity", Factor, The type of activity performed when measurements were taken
 
-The dataset includes the following files:
+MEASUREMENTS (all numeric)
 
-    'README.txt'
+[1] "timeBodyAccelerometer-mean()-X"
+[2] "timeBodyAccelerometer-mean()-Y"
+[3] "timeBodyAccelerometer-mean()-Z"
+[4] "timeBodyAccelerometer-std()-X"
+[5] "timeBodyAccelerometer-std()-Y"
+[6] "timeBodyAccelerometer-std()-Z"
+[7] "timeGravityAccelerometer-mean()-X"
+[8] "timeGravityAccelerometer-mean()-Y"
+[9] "timeGravityAccelerometer-mean()-Z"
+[10] "timeGravityAccelerometer-std()-X"
+[11] "timeGravityAccelerometer-std()-Y"
+[12] "timeGravityAccelerometer-std()-Z"
+[13] "timeBodyAccelerometerJerk-mean()-X"
+[14] "timeBodyAccelerometerJerk-mean()-Y"
+[15] "timeBodyAccelerometerJerk-mean()-Z"
+[16] "timeBodyAccelerometerJerk-std()-X"
+[17] "timeBodyAccelerometerJerk-std()-Y"
+[18] "timeBodyAccelerometerJerk-std()-Z"
+[19] "timeBodyGyroscope-mean()-X"
+[20] "timeBodyGyroscope-mean()-Y"
+[21] "timeBodyGyroscope-mean()-Z"
+[22] "timeBodyGyroscope-std()-X"
+[23] "timeBodyGyroscope-std()-Y"
+[24] "timeBodyGyroscope-std()-Z"
+[25] "timeBodyGyroscopeJerk-mean()-X"
+[26] "timeBodyGyroscopeJerk-mean()-Y"
+[27] "timeBodyGyroscopeJerk-mean()-Z"
+[28] "timeBodyGyroscopeJerk-std()-X"
+[29] "timeBodyGyroscopeJerk-std()-Y"
+[30] "timeBodyGyroscopeJerk-std()-Z"
+[31] "timeBodyAccelerometerMagnitued-mean()"
+[32] "timeBodyAccelerometerMagnitued-std()"
+[33] "timeGravityAccelerometerMagnitued-mean()"
+[34] "timeGravityAccelerometerMagnitued-std()"
+[35] "timeBodyAccelerometerJerkMagnitued-mean()"
+[36] "timeBodyAccelerometerJerkMagnitued-std()"
+[37] "timeBodyGyroscopeMagnitued-mean()"
+[38] "timeBodyGyroscopeMagnitued-std()"
+[39] "timeBodyGyroscopeJerkMagnitued-mean()"
+[40] "timeBodyGyroscopeJerkMagnitued-std()"
+[41] "frequencyBodyAccelerometer-mean()-X"
+[42] "frequencyBodyAccelerometer-mean()-Y"
+[43] "frequencyBodyAccelerometer-mean()-Z"
+[44] "frequencyBodyAccelerometer-std()-X"
+[45] "frequencyBodyAccelerometer-std()-Y"
+[46] "frequencyBodyAccelerometer-std()-Z"
+[47] "frequencyBodyAccelerometerJerk-mean()-X"
+[48] "frequencyBodyAccelerometerJerk-mean()-Y"
+[49] "frequencyBodyAccelerometerJerk-mean()-Z"
+[50] "frequencyBodyAccelerometerJerk-std()-X"
+[51] "frequencyBodyAccelerometerJerk-std()-Y"
+[52] "frequencyBodyAccelerometerJerk-std()-Z"
+[53] "frequencyBodyGyroscope-mean()-X"
+[54] "frequencyBodyGyroscope-mean()-Y"
+[55] "frequencyBodyGyroscope-mean()-Z"
+[56] "frequencyBodyGyroscope-std()-X"
+[57] "frequencyBodyGyroscope-std()-Y"
+[58] "frequencyBodyGyroscope-std()-Z"
+[59] "frequencyBodyAccelerometerMagnitued-mean()"
+[60] "frequencyBodyAccelerometerMagnitued-std()"
+[61] "frequencyBodyAccelerometerJerkMagnitued-mean()" [62] "frequencyBodyAccelerometerJerkMagnitued-std()" [63] "frequencyBodyGyroscopeMagnitued-mean()"
+[64] "frequencyBodyGyroscopeMagnitued-std()"
+[65] "frequencyBodyGyroscopeJerkMagnitued-mean()"
+[66] "frequencyBodyGyroscopeJerkMagnitued-std()"
 
-    'features_info.txt': Shows information about the variables used on the feature vector.
-
-    'features.txt': List of all features.
-
-    'activity_labels.txt': Links the class labels with their activity name.
-
-    'train/X_train.txt': Training set.
-
-    'train/y_train.txt': Training labels.
-
-    'test/X_test.txt': Test set.
-
-    'test/y_test.txt': Test labels.
-
-The following files are available for the train and test data. Their descriptions are equivalent.
-
-    'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
-
-    'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis.
-
-    'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration.
-
-    'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
-
-Transformation details
-
-There are 5 parts:
-
-    Merges the training and the test sets to create one data set.
-    Extracts only the measurements on the mean and standard deviation for each measurement.
-    Uses descriptive activity names to name the activities in the data set
-    Appropriately labels the data set with descriptive activity names.
-    Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-How run_analysis.R implements the above steps:
-
-    Require reshapre2 and data.table librareis.
-    Load both test and train data
-    Load the features and activity labels.
-    Extract the mean and standard deviation column names and data.
-    Process the data. There are two parts processing test and train data respectively.
-    Merge data set.
